@@ -1,0 +1,13 @@
+#nav-bar-top ul li{
+    list-style: none;
+    display: inline-block;
+    float: right;
+}
+
+#nav-bar-top ul li a{
+    color: black;
+    display: flex;
+    margin: 1rem;
+    text-decoration: none;
+}
+

@@ -27,25 +27,28 @@
                 <li>
                     <a href="#">About</a>
                 </li>
-                <li>
+                <li class="yellow-btn">
                     <a href="#">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h1>Compelling headline</h1>
-            <article>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
-                </p>
-                <a href="#">Read more about our services</a>
-            </article>
-        </section>
-        <section>
+        <section id="compelling-headline-section">
+            <figure>
+                <img src="img/forest-backround.jpg" alt="Misty forest in autumn">
+                <figcaption>
+                    <h1>Compelling headline</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+                        Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+                    </p>
+                    <a href="#" id="read-more-services">Read more about our services</a>
+                </figcaption>
+            </figure>
+        </section>        
+        <section id="sub-heading">
             <h2>Engaging subheading - what can you help your visitor with</h2>
             <article>
                 <p>
@@ -96,7 +99,10 @@
     <footer>
         <section>
             <h2>Sign up our newsletter</h2>
-            
+            <form method="post" action="#">
+                <input type="email" name="email" placeholder="nora@epost.no.." id="email" required>
+                <input type="submit" value="Sign me up">
+            </form>
         </section>
     </footer>
 </body>

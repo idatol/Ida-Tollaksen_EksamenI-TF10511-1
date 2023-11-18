@@ -18,7 +18,7 @@ body{
 }
 
 #nav-bar-top a img{
-    width: 35vw;
+    width: 15vw;
     height: auto;
 }
 
@@ -30,15 +30,15 @@ body{
 #nav-bar-top ul li{
     display: flex;
     list-style: none;
-    padding: 1rem;
+    padding: 10px;
     align-items: center;
     justify-content: center;
-    margin: 1rem;
+    margin: 10px;
 }
 
 #nav-bar-top ul li a{
     color: black;
-    font-size: 22px;
+    font-size: 3vw;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }
@@ -47,6 +47,10 @@ body{
     background-color: #e6bd43;
     border: 1px solid #000000;
 }
+
+/*  
+css for forside start 
+*/
 
 #compelling-headline-section figure {
     position: relative;
@@ -194,6 +198,87 @@ h3{
 }
 
 /*  
+css for forside slutt 
+*/
+
+#portfolio-section figure{
+    position: relative;
+    margin: 0;
+}
+
+#portfolio-section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.75; /* Endrer synligheten på bildet */
+}
+
+#portfolio-section figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Generert av chat gpt */
+    text-align: center;
+    color: #000;
+    width: 80%;
+}
+
+#portfolio-section figcaption h1 {
+    font-size: 4.5vw;
+}
+
+#previous-jobs{
+    margin: 2rem;
+}
+
+#previous-jobs h2{
+    border-bottom: 1px solid #e6bd43;
+    padding: 10px;
+}
+
+#previous-jobs {
+    width: 100%;
+}
+
+#previous-jobs ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+#previous-jobs ul li {
+    margin: 10px;
+    justify-content: space-between;
+}
+
+#previous-jobs ul li a {
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 10px;
+    font-size: 2.5vw;
+}
+
+
+.default-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 2rem;
+}
+
+.default-flex h2{
+    flex-basis: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #e6bd43;
+}
+
+.default-flex figure figcaption{
+    font-weight: 600;
+}
+
+/*  
 css for desktop 
 */
 
@@ -230,4 +315,5 @@ css for mobil
         margin-top: 0;
         margin-bottom: 0;
     }
+
 }

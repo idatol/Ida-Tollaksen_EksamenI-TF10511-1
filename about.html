@@ -34,52 +34,56 @@
         </nav>
     </header>
     <main>
-        <section id="about-comp">
-            <img src="img/forest-backround.jpg" alt="Misty forest in autumn">
-            <article>
-                <h4>The circle</h4>
-                <h2>About Our Company</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                    et dolore magna aliqua. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. 
-                    Netus et malesuada fames ac turpis egestas integer eget. Suspendisse in est ante in nibh mauris cursus mattis. 
-                    Consequat semper viverra nam libero justo laoreet sit. Quis viverra nibh cras pulvinar mattis nunc sed. 
-                    Pretium quam vulputate dignissim suspendisse in est ante in nibh. Felis eget nunc lobortis mattis aliquam 
-                    faucibus purus. Leo vel orci porta non pulvinar neque. Turpis egestas sed tempus urna et pharetra.
-                </p>
-                <a href="#contact-us" class="yellow-btn">Get in tuch with us</a>
-            </article>
+        <section id="aoc">
+            <figure>
+                <img src="img/forest-backround.jpg" alt="Misty forest in autumn">
+                <figcaption>
+                    <h4>The circle</h4>
+                    <h1>About Our Company</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. 
+                            Netus et malesuada fames ac turpis egestas integer eget. Suspendisse in est ante in nibh mauris cursus mattis. 
+                            Consequat semper viverra nam libero justo laoreet sit. Quis viverra nibh cras pulvinar mattis nunc sed. 
+                            Pretium quam vulputate dignissim suspendisse in est ante in nibh. Felis eget nunc lobortis mattis aliquam 
+                            faucibus purus. Leo vel orci porta non pulvinar neque. Turpis egestas sed tempus urna et pharetra.
+                        </p>
+                    <a href="#contact-form" class="yellow-btn">Get in tuch with us</a>
+                </figcaption>
+            </figure>
         </section>
         <section id="our-services">
             <h2>Our services</h2>
-            <article>
-                <i class="fa-solid fa-people-group"></i>
-                <h3>Branding</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                </p>
-            </article>
-            <article>
-                <i class="fa-solid fa-cloud-arrow-down"></i>
-                <h3>Design</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                </p>
-            </article>
-            <article>
-                <i class="fa-solid fa-code"></i>
-                <h3>Development</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                </p>
-            </article>
-            <article>
-                <i class="fa-solid fa-wifi"></i>
-                <h3>Support</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                </p>
-            </article>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-people-group"></i>
+                    <a href="#branding"> Branding </a>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                    </p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                    <a href="#design"> Design </a>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    </p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-code"></i>
+                    <a href="#development"> Development </a>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                    </p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-wifi"></i>
+                    <a href="#support"> Support </a>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                    </p>
+                </li>
+            </ul>
         </section>
         <section id="some-clients">
             <h2>Some of our clients</h2>
@@ -89,20 +93,58 @@
                 <li><img src="img/placeholder-circle.png" alt="placeholder round profile picture"></li>
             </ul>
         </section>
+        <section id="contact-form">
+            <h2>Contact us</h2>
+            <article id="form">
+                <h3>Send us a message</h3>
+                <form action="#" method="post">
+                    <label for="fname">Name</label>
+                    <input type="text" name="fname" id="fname" placeholder="Ola Nordmann" required>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject" placeholder="Branding" required>
+
+                    <label for="message">Message</label>
+                    <input type="text" name="message" id="message" required>
+
+                    <input type="submit" value="Send message" class="yellow-btn" id="knapp-send">
+                </form>
+            </article>
+            <article id="info-form">
+                <h3>Contact information</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+                    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
+                </p>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> B R A Veien 4, 1757 Halden</li>
+                    <li><i class="fa-solid fa-phone"></i> 69 60 80 00</li>
+                    <li><i class="fa-solid fa-envelope"></i> postmottak@hiof.no</li>
+                </ul>
+            </article>
+        </section>
     </main>
     <footer>
         <section id="footer3">
-            
-        </section>
+            <iframe                 
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAxn46TcBdDfnKNZYQG46PPAFRD5jLsHzY&q=B+R+A+Veien+4,+1757+Halden">
+            </iframe>
+        </section>        
         <section id="footer2">
             <figure>
                 <a href="index.html"><img src="img/main-logo.png" alt="The circle logo"></a>
             </figure>
             <h3 id="copyrigths">Company copyright 2023</h3>
             <ul id="icons-footer">
-                <li><i class="fa-brands fa-square-facebook"></i></li>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-linkedin"></i></li>
+                <li>
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
             </ul>
         </section>
     </footer>

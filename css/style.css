@@ -54,7 +54,7 @@ body{
 css for forside start 
 */
 
-#compelling-headline-section figure {
+#compelling-headline-section figure{
     position: relative;
     margin: 0;
 }
@@ -66,7 +66,7 @@ css for forside start
     opacity: 0.75; /* Endrer synligheten på bildet */
 }
 
-#compelling-headline-section figcaption {
+#compelling-headline-section figcaption{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -76,12 +76,13 @@ css for forside start
     width: 80%;
 }
 
-#compelling-headline-section figcaption h1 {
+#compelling-headline-section figcaption h1{
     font-size: 4.5vw;
+    margin: 0.5rem;  
 }
 
-#compelling-headline-section figcaption p {
-    margin-bottom: 20px;
+#compelling-headline-section figcaption p{
+    margin: 1rem 4rem;
     font-size: 2.5vw;
 }
 
@@ -95,11 +96,13 @@ css for forside start
     background-color: #e6bd43;
 }
 
+
 #sub-heading{
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 2rem;
+    margin: 1rem 4rem;
 }
 
 h2{
@@ -142,8 +145,7 @@ p{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: 4rem;
 }
 
 h3{
@@ -151,10 +153,26 @@ h3{
     font-weight: 600;
 }
 
-#our-services article{
-    margin: 1rem;
+#our-services ul{
+    padding-left: 0 ;
+    gap: 8rem;
+} 
+
+#our-services ul li{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
 }
 
+#our-services ul li a{
+    color: #000;
+    text-decoration: none;
+}
+
+#our-services ul li i{
+    color: #000;
+    font-size: 1.5rem;
+}
 
 
 #footer2{
@@ -177,17 +195,22 @@ h3{
     list-style: none;
 }
 
+#icons-footer li i{
+    font-size: 4rem; /*Endrer størelsen på ikonene*/
+}
+
 #footer1{
     background-color: #dee2e691;
-    padding: 2rem;
+    padding: 2rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 #email{
     padding: 10px;
-    font-size: 3vw;
+    font-size: 2vw;
     border: 1px solid #000;
 }
 
@@ -195,12 +218,9 @@ h3{
     padding: 10px;
     background-color: #e6bd43;
     border: 1px solid #000;
+    font-size: 2vw;
     font-weight: 600;
 }
-
-/*  
-css for forside slutt 
-*/
 
 #portfolio-section figure{
     position: relative;
@@ -262,21 +282,157 @@ css for forside slutt
 }
 
 
-.default-flex{
+.bilde-flex{
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     margin: 2rem;
 }
 
-.default-flex h2{
+.bilde-flex h2{
     flex-basis: 100%;
     padding: 10px;
     border-bottom: 1px solid #e6bd43;
 }
 
-.default-flex figure figcaption{
+.bilde-flex figure figcaption{
     font-weight: 600;
+}
+
+.bilde-flex figure img{
+    max-width: 350px;
+    min-width: 200px;
+}
+
+#aoc figure{
+    position: relative;
+    margin: 0;
+}
+
+#aoc img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#aoc figcaption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Generert av chat gpt */
+    text-align: left;
+    color: #000;
+    width: 80%;
+    background-color: #fff;
+    opacity: 0.75;
+    padding: 2rem;
+}
+
+#aoc figcaption h1{
+    font-size: 4.5vw;
+    margin: 0.5rem;  
+}
+
+#aoc figcaption p{
+    margin: 1rem 4rem;
+    font-size: 2vw;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#aoc figcaption h4{
+    margin: 0.5rem;
+    font-size: 2vw;
+}
+
+#aoc figcaption a {
+    text-decoration: none;
+    font-size: 2.5vw;
+    font-weight: 800;
+    border: 1px solid #000;
+    padding: 1.5vw;
+    color: #000;
+    background-color: #e6bd43;
+}
+
+#some-clients{
+    background-color: #e6bd43;
+}
+
+#some-clients h2{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#some-clients ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 2rem;
+    margin: 0rem 5rem;
+}
+
+#some-clients ul li img{
+    height: auto;
+    width: 20vw;
+}
+
+#footer3 iframe{
+    height: 300px;
+    width: 100%;
+}
+
+#contact-form{
+    display: grid;
+    background-color: #dee2e6;
+}
+
+#contact-form h2{
+    grid-row: 1 / 2;
+    grid-column: 1/ 3;
+    display: flex;
+    justify-content: center;
+}
+
+#form{
+    margin: 2rem;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 40vw;
+}
+
+#form form{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    gap: 1rem;
+}
+
+#message{
+    height: 8rem;
+}
+
+#knapp-send{
+    width: 8rem;
+}
+
+#info-form{
+    margin: 2rem;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    width: 40vw;
+}
+
+#info-form ul{
+    list-style: none;    
+    padding: 0;
+}
+
+#info-form ul li{
+    margin: 1rem 0;
 }
 
 /*  
@@ -285,6 +441,10 @@ css for desktop
 
 @media only screen and (min-width:600px){
     
+    #aoc figcaption p{
+        margin-bottom: 2.5rem;
+    }
+
     #about-our-comp-forside{
         background-color: #fff;
         display: grid;
@@ -315,12 +475,66 @@ css for desktop
         background-color: #fff;
     }
 
-    #our-services article i{
+    #our-services ul li i{
         display: none;
     }
 
-    
-    
+    #our-services ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8rem;
+        justify-content: center;
+    }
+
+    #our-services ul li{
+        max-width: 200px;
+    }
+
+    #our-services ul li a{
+    font-size: 3vw;
+    font-weight: 600;
+    }
+
+    #footer2{
+        display: grid;
+        justify-content: space-around;
+        padding: 2rem;      
+    }
+
+    #footer2 figure{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #footer2 figure a img{
+        max-width: 100px;
+    }
+
+    #footer2 h3{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        font-size: 2rem;
+    }
+
+    #footer2 ul{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #footer2 ul li a i{
+        padding: 1rem;
+        text-decoration: none;
+        color: #fff;
+    }
 }
 
 /*  
@@ -344,6 +558,13 @@ css for mobil
     #footer2 figure{
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    #contact-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 }

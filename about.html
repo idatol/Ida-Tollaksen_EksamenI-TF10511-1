@@ -14,6 +14,7 @@
     <title>Portfolio</title>
 </head>
 <body>
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     <header>
         <nav id="nav-bar-top">
             <a href="index.html"><img src="img/main-logo.png" alt="The circle logo"></a>
@@ -126,10 +127,8 @@
     </main>
     <footer>
         <section id="footer3">
-            <iframe                 
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAxn46TcBdDfnKNZYQG46PPAFRD5jLsHzY&q=B+R+A+Veien+4,+1757+Halden">
-            </iframe>
-        </section>        
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8188.819074708739!2d11.3610488!3d59.1289743!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2s%C3%98stfold%20University%20College!5e0!3m2!1sen!2sno!4v1700846297805!5m2!1sen!2sno" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>               
         <section id="footer2">
             <figure>
                 <a href="index.html"><img src="img/main-logo.png" alt="The circle logo"></a>
@@ -148,5 +147,28 @@
             </ul>
         </section>
     </footer>
+    <!--Start, krevet av chat gpt(kilde 1)-->
+    <script> 
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+    
+        window.onscroll = function() {
+          scrollFunction();
+        };
+      
+        function scrollFunction() {
+          var scrollButton = document.getElementById("scrollBtn");
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollButton.style.display = "block";
+          } else {
+            scrollButton.style.display = "none";
+          }
+        }
+      </script>
+      <!--Slutt-->
 </body>
 </html>

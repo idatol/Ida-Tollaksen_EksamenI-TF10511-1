@@ -14,18 +14,19 @@
     <title>Forside</title>
 </head>
 <body>
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     <header>
         <nav id="nav-bar-top">
             <a href="index.html"><img src="img/main-logo.png" alt="The circle logo"></a>
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html" class="yellow-underline">Home</a>
                 </li>
                 <li>
-                    <a href="portfolio.html">Portfolio</a>
+                    <a href="portfolio.html" class="yellow-underline">Portfolio</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="about.html" class="yellow-underline">About</a>
                 </li>
                 <li class="yellow-btn">
                     <a href="about.html#contact-form">Contact</a>
@@ -130,5 +131,28 @@
             </ul>
         </section>
     </footer>
+    <!--Start, krevet av chat gpt(kilde 1)-->
+    <script> 
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+    
+        window.onscroll = function() {
+          scrollFunction();
+        };
+      
+        function scrollFunction() {
+          var scrollButton = document.getElementById("scrollBtn");
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollButton.style.display = "block";
+          } else {
+            scrollButton.style.display = "none";
+          }
+        }
+      </script>
+      <!--Slutt-->
 </body>
 </html>

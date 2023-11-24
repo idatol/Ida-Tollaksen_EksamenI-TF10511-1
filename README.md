@@ -1,12 +1,16 @@
 # Ida-Tollaksen_EksamenI-TF10511-1
 Eksamensoppgave i ITF10511-1 23H Webutvikling - Ida Tollaksen
 
-Kilder: 
+Ambisjonsnivå: karakter B :D
 
-W3 Scholls:
+Kilder:
+
+1. Chat JPT:
+https://chat.openai.com/
+
+2. W3 Scholls:
 https://www.w3schools.com/
 
-
-Alle ikoner er hentet fra font awsome: 
+3. Alle ikoner er hentet fra font awsome: 
 https://fontawesome.com/
 

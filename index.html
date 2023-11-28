@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ida Tollaksen">
+    <meta name="description" content="The circle company - Design studio">
     
     <!--kobling til Css dokument og legger til iconer fra font awsome-->
     <link href="css/style.css" rel="stylesheet">
@@ -10,128 +12,161 @@
     <link href="css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
     <link href="css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
     <link href="css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+
+    <!--Legger til fav icon-->
+    <link rel="icon" type="image/x-icon" href="img/main-logo.png">
+
+    <!--facbook meta data-->
+    <meta property="og:title" content="The circle company">
+    <meta property="og:url" content="https://schema.org/AggregateRating">
+    <meta property="og:description" content="The circle company - Design studio">
+    <meta property="og:image" content="https://pixabay.com/photos/forest-trees-fog-conifers-pine-3622519/"> 
+    
+    <!--Instagram meta data-->
+    <meta property="og:title" content="The circle company">
+    <meta property="og:description" content="The circle company - Design studio">
+    <meta property="og:image" content="https://pixabay.com/photos/forest-trees-fog-conifers-pine-3622519/">
+    <meta property="og:image:alt" content="The circle company Instagram Image">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itstud.hiof.no/~idakto/">
     
     <title>Forside</title>
 </head>
 <body>
-    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top" aria-label="Scroll to Top"><i class="fa-solid fa-arrow-up"></i></button>
     <header>
-        <nav id="nav-bar-top">
-            <a href="index.html"><img src="img/main-logo.png" alt="The circle logo"></a>
+        <nav id="nav-bar-top" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="index.html"><img src="img/main-logo.png" alt="The circle logo" title="Go to home page"></a> <!--Bilde er informativt og burde inneholde et beskrivende alt atribut - Bilde 1 (se eksamensdokument) -->
             <ul>
                 <li>
-                    <a href="index.html" class="yellow-underline">Home</a>
+                    <a href="index.html" class="yellow-underline" title="Go to home page" aria-current="page" itemprop="url">
+                        <span itemprop="name">Home</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="portfolio.html" class="yellow-underline">Portfolio</a>
+                    <a href="portfolio.html" class="yellow-underline" title="Go to portfolio page" itemprop="url">
+                        <span itemprop="name">Portfolio</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="about.html" class="yellow-underline">About</a>
+                    <a href="about.html" class="yellow-underline" title="Go to about us page" itemprop="url">
+                        <span itemprop="name">About</span>
+                    </a>
                 </li>
                 <li class="yellow-btn">
-                    <a href="about.html#contact-form">Contact</a>
+                    <a class="yellow-btn-a" href="about.html#contact-form" title="Go to contact us form" itemprop="url">
+                        <span itemprop="name">Contact</span>
+                    </a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="compelling-headline-section">
+        <section id="compelling-headline-section" itemscope itemtype="https://schema.org/ContactPage">
             <figure>
-                <img src="img/forest-backround.jpg" alt="Misty forest in autumn">
+                <img src="img/forest-backround.jpg" alt="Misty forest in autumn" itemprop="thumbnail"> <!--Bilde er til pynt-->
                 <figcaption>
-                    <h1>Compelling headline</h1>
-                    <p>
+                    <h1 itemprop="headline">Compelling headline</h1>
+                    <p itemprop="description">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
                         Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
                         Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
                     </p>
-                    <a href="#our-services" id="read-more-services">Read more about our services</a>
+                    <a href="#our-services" id="read-more-services" itemprop="url">Read more about our services</a>
                 </figcaption>
             </figure>
         </section>        
-        <section id="sub-heading">
-            <h2>Engaging subheading - what can you help your visitor with</h2>
+        <section id="sub-heading" itemscope itemtype="https://schema.org/ContactPage">
+            <h2 itemprop="headline">Engaging subheading - what can you help your visitor with</h2>
             <article>
-                <p>
+                <p itemprop="description">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
                     Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </p>
             </article>
         </section>
-        <section id="about-our-comp-forside">
+        <section id="about-our-comp-forside" itemtype="http://schema.org/WebPageElement">
             <figure id="figure-grid">
-                <img src="img/400x400.png" alt="placeholder image 400x400 px">
+                <img src="img/400x400.png" alt="placeholder image 400x400 px" itemprop="image"> <!--Bilde er informativt og burde inneholde et beskrivende alt atribut -->
             </figure>
             <article id="article-grid">
-                <h2>About our company</h2>
-                <p>
+                <h2 itemprop="headline">About our company</h2>
+                <p itemprop="description">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
                 </p>
-                <a href="about.html">Read more about us</a>
+                <a href="about.html" title="Go to read more about us page" id="read-more" itemprop="url">Read more about us</a>
             </article>
         </section>
-        <section id="our-services">
+        <section id="our-services" itemscope itemtype="https://schema.org/Service">
             <h2>Our services</h2>
             <ul>
                 <li>
                     <i class="fa-solid fa-people-group"></i>
-                    <a href="#branding"> Branding </a>
-                    <p>
+                    <a href="portfolio.html#branding" title="Go to our branding portfolio" aria-describedby="branding-info" itemprop="url">  
+                        <span itemprop="serviceType">Branding</span>
+                    </a>
+                    <p id="branding-info" itemprop="description">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                     </p>
                 </li>
                 <li>
                     <i class="fa-solid fa-cloud-arrow-down"></i>
-                    <a href="#design"> Design </a>
-                    <p>
+                    <a href="portfolio.html#design" title="Go to our design portfolio" aria-describedby="design-info" itemprop="url"> 
+                        <span itemprop="serviceType">Design</span>
+                    </a>
+                    <p id="design-info" itemprop="description">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                     </p>
                 </li>
                 <li>
                     <i class="fa-solid fa-code"></i>
-                    <a href="#development"> Development </a>
-                    <p>
+                    <a href="portfolio.html#development" title="Go to our development portfolio" aria-describedby="development-info" itemprop="url"> 
+                        <span itemprop="serviceType">Development</span>
+                    </a>
+                    <p id="development-info" itemprop="description">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                     </p>
                 </li>
                 <li>
                     <i class="fa-solid fa-wifi"></i>
-                    <a href="#support"> Support </a>
-                    <p>
+                    <a href="about.html#info-form" title="Go to our contact suport page" aria-describedby="support-info" itemprop="url">
+                        <span itemprop="serviceType">Support</span>
+                    </a>
+                    <p id="support-info" itemprop="description">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                     </p>
                 </li>
             </ul>
         </section>
-        
     </main>
-    <footer>
-        <section id="footer1">
-            <h2>Sign up our newsletter</h2>
-            <form method="post" action="#">
-                <input type="email" name="email" placeholder="nora@epost.no.." id="email" required>
-                <input type="submit" value="Sign me up!" id="sign-me-up">
-            </form>
+    <footer itemscope itemtype="https://schema.org/WPFooter">
+        <section id="footer1" itemscope itemtype="https://schema.org/ContactPage">
+            <h2 itemprop="headline">Sign up our newsletter</h2>
+            <form method="post" action="#" aria-label="Sign-up for our newsletter form" itemprop="potentialAction" itemscope itemtype="https://schema.org/SubscribeAction">
+                <input type="email" name="email" id="email" placeholder="Ex: ola.nordmann@epost.no" aria-label="Enter your email here" required aria-required="true" itemprop="agent">
+                <input type="submit" value="Sign me up!" id="sign-me-up" aria-label="Sign you up button">
+            </form>            
         </section>
-        <section id="footer2">
+        <section id="footer2" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="url" content="https://itstud.hiof.no/~idakto/">
             <figure>
-                <a href="index.html"><img src="img/main-logo.png" alt="The circle logo"></a>
+                <a href="index.html" title="Go to home page" role="button" aria-current="page"><img src="img/main-logo.png" alt="The circle logo" itemprop="logo"></a> <!--Bilde er informativt og burde inneholde et beskrivende alt atribut -->
             </figure>
-            <h3 id="copyrigths">Company copyright 2023</h3>
-            <ul id="icons-footer">
+            <h3 id="copyrigths" itemprop="copyrightHolder">Company copyright 2023</h3>
+            <ul id="icons-footer" itemscope itemtype="https://schema.org/SocialMediaPosting">
                 <li>
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.facebook.com/" title="Go to our facebook page" aria-label="Visit our Facebook page" itemprop="url"><i class="fa-brands fa-square-facebook"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/" title="Go to our instagram page" aria-label="Visit our Instagram page" itemprop="url"><i class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com" title="Go to our linkedin page" aria-label="Visit our Linkedin page" itemprop="url"><i class="fa-brands fa-linkedin"></i></a>
                 </li>
             </ul>
         </section>
     </footer>
-    <!--Start, krevet av chat gpt(kilde 1)-->
+    <!--Start, srevet av chat gpt(kilde 1)-->
     <script> 
         function scrollToTop() {
           window.scrollTo({

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ida Tollaksen">
+    <meta name="description" content="The circle company - About our company">
     
     <!--kobling til Css dokument og legger til iconer fra font awsome-->
     <link href="css/style.css" rel="stylesheet">
@@ -10,38 +12,63 @@
     <link href="css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
     <link href="css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
     <link href="css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+
+    <!--Legger til fav icon-->
+    <link rel="icon" type="image/x-icon" href="img/main-logo.png">
+
+    <!--facbook meta data-->
+    <meta property="og:title" content="The circle company">
+    <meta property="og:url" content="https://schema.org/AggregateRating">
+    <meta property="og:description" content="The circle company - About our company">
+    <meta property="og:image" content="https://pixabay.com/photos/forest-trees-fog-conifers-pine-3622519/"> 
     
-    <title>Portfolio</title>
+    <!--Instagram meta data-->
+    <meta property="og:title" content="The circle company">
+    <meta property="og:description" content="The circle company - About our company">
+    <meta property="og:image" content="https://pixabay.com/photos/forest-trees-fog-conifers-pine-3622519/">
+    <meta property="og:image:alt" content="The circle company Instagram Image">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itstud.hiof.no/~idakto/about.html">
+
+    <title>About us</title>
 </head>
 <body>
-    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top" aria-label="Scroll to Top"><i class="fa-solid fa-arrow-up"></i></button>
     <header>
-        <nav id="nav-bar-top">
-            <a href="index.html"><img src="img/main-logo.png" alt="The circle logo"></a>
+        <nav id="nav-bar-top" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="index.html"><img src="img/main-logo.png" alt="The circle logo" title="Go to home page"></a> <!--Bilde er informativt og burde inneholde et beskrivende alt atribut - Bilde 1 (se eksamensdokument for kilde) -->
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html" class="yellow-underline" title="Go to home page" itemprop="url">
+                        <span itemprop="name">Home</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="portfolio.html">Portfolio</a>
+                    <a href="portfolio.html" class="yellow-underline" title="Go to portfolio page" itemprop="url">
+                        <span itemprop="name">Portfolio</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="about.html" class="yellow-underline" title="Go to about us page" aria-current="page" itemprop="url">
+                        <span itemprop="name">About</span>
+                    </a>
                 </li>
                 <li class="yellow-btn">
-                    <a href="about.html#contact-us">Contact</a>
+                    <a class="yellow-btn-a" href="about.html#contact-form" title="Go to contact us form" aria-current="page" itemprop="url">
+                        <span itemprop="name">Contact</span>
+                    </a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="aoc">
+        <section id="aoc" itemscope itemtype="http://schema.org/AboutPage">
             <figure>
-                <img src="img/forest-backround.jpg" alt="Misty forest in autumn">
+                <img src="img/forest-backround.jpg" alt="Misty forest in autumn" itemprop="thumbnail"> <!--Bilde er til pynt-->
                 <figcaption>
-                    <h4>The circle</h4>
-                    <h1>About Our Company</h1>
-                        <p>
+                    <h4 itemprop="name">The circle</h4>
+                    <h1 itemprop="headline">About Our Company</h1>
+                        <p itemprop="description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                             et dolore magna aliqua. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. 
                             Netus et malesuada fames ac turpis egestas integer eget. Suspendisse in est ante in nibh mauris cursus mattis. 
@@ -49,105 +76,120 @@
                             Pretium quam vulputate dignissim suspendisse in est ante in nibh. Felis eget nunc lobortis mattis aliquam 
                             faucibus purus. Leo vel orci porta non pulvinar neque. Turpis egestas sed tempus urna et pharetra.
                         </p>
-                    <a href="#contact-form" class="yellow-btn">Get in tuch with us</a>
+                    <a href="#contact-form" id="contact-us" title="Go to contact us form" role="button" itemprop="url">Get in tuch with us</a>
                 </figcaption>
             </figure>
         </section>
-        <section id="our-services">
+        <section id="our-services" itemscope itemtype="https://schema.org/Service">
             <h2>Our services</h2>
             <ul>
                 <li>
                     <i class="fa-solid fa-people-group"></i>
-                    <a href="#branding"> Branding </a>
-                    <p>
+                    <a href="portfolio.html#branding" title="Go to our branding portfolio" aria-describedby="branding-info" itemprop="url">  
+                        <span itemprop="serviceType">Branding</span>
+                    </a>
+                    <p id="branding-info" itemprop="description">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                     </p>
                 </li>
                 <li>
                     <i class="fa-solid fa-cloud-arrow-down"></i>
-                    <a href="#design"> Design </a>
-                    <p>
+                    <a href="portfolio.html#design" title="Go to our design portfolio" aria-describedby="design-info" itemprop="url"> 
+                        <span itemprop="serviceType">Design</span>
+                    </a>
+                    <p id="design-info" itemprop="description">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                     </p>
                 </li>
                 <li>
                     <i class="fa-solid fa-code"></i>
-                    <a href="#development"> Development </a>
-                    <p>
+                    <a href="portfolio.html#development" title="Go to our development portfolio" aria-describedby="development-info" itemprop="url"> 
+                        <span itemprop="serviceType">Development</span>
+                    </a>
+                    <p id="development-info" itemprop="description">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                     </p>
                 </li>
                 <li>
                     <i class="fa-solid fa-wifi"></i>
-                    <a href="#support"> Support </a>
-                    <p>
+                    <a href="about.html#info-form" title="Go to our contact suport page" aria-describedby="support-info" itemprop="url">
+                        <span itemprop="serviceType">Support</span>
+                    </a>
+                    <p id="support-info" itemprop="description">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                     </p>
                 </li>
             </ul>
         </section>
-        <section id="some-clients">
+        <section id="some-clients" itemscope itemtype="https://schema.org/ItemList">
             <h2>Some of our clients</h2>
-            <ul>
-                <li><img src="img/placeholder-circle.png" alt="placeholder round profile picture"></li>
-                <li><img src="img/placeholder-circle.png" alt="placeholder round profile picture"></li>
-                <li><img src="img/placeholder-circle.png" alt="placeholder round profile picture"></li>
+            <ul> <!--Bildene i listen er informativt og burde inneholde beskrivende alt atribut -->
+                <li itemprop="name">
+                    <img src="img/placeholder-circle.png" alt="placeholder round profile picture, client 1" itemprop="image">
+                </li>
+                <li itemprop="name">
+                    <img src="img/placeholder-circle.png" alt="placeholder round profile picture, client 2" itemprop="image">
+                </li>
+                <li itemprop="name">
+                    <img src="img/placeholder-circle.png" alt="placeholder round profile picture, client 3" itemprop="image">
+                </li>
             </ul>
         </section>
-        <section id="contact-form">
-            <h2>Contact us</h2>
-            <article id="form">
+        <section id="contact-form" itemscope itemtype="https://schema.org/ContactPage">
+            <h2 itemprop="headline">Contact us</h2>
+            <article id="form" itemprop="mainEntity" itemscope itemtype="https://schema.org/ContactPoint">
                 <h3>Send us a message</h3>
-                <form action="#" method="post">
+                <form action="#" method="post" itemprop="contactForm">
                     <label for="fname">Name</label>
-                    <input type="text" name="fname" id="fname" placeholder="Ola Nordmann" required>
+                    <input type="text" name="fname" id="fname" placeholder="Ex: Ola Nordmann"  aria-label="Please enter your full name" required aria-required="true" itemprop="name">
 
                     <label for="subject">Subject</label>
-                    <input type="text" name="subject" id="subject" placeholder="Branding" required>
+                    <input type="text" name="subject" id="subject" placeholder="Ex: Branding" aria-label="Please write the subject matter here" aria-required="false" itemprop="identifier"> <!--Valgte å ikke gjøre denne required-->
 
                     <label for="message">Message</label>
-                    <input type="text" name="message" id="message" required>
+                    <input type="text" name="message" id="message" aria-label="Please write your message here" required aria-required="true" itemprop="description">
 
-                    <input type="submit" value="Send message" class="yellow-btn" id="knapp-send">
+                    <input type="submit" value="Send message" id="knapp-send" aria-label="Send your message">
                 </form>
             </article>
-            <article id="info-form">
+            <article id="info-form" itemscope itemtype="https://schema.org/PostalAddress">
                 <h3>Contact information</h3>
-                <p>
+                <p itemprop="description">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
                     sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
                 </p>
                 <ul>
-                    <li><i class="fa-solid fa-location-dot"></i> B R A Veien 4, 1757 Halden</li>
-                    <li><i class="fa-solid fa-phone"></i> 69 60 80 00</li>
-                    <li><i class="fa-solid fa-envelope"></i> postmottak@hiof.no</li>
+                    <li title="Our contact address" itemprop="address"><i class="fa-solid fa-location-dot"></i> B R A Veien 4, 1757 Halden</li>
+                    <li title="Our contact phone number" itemprop="telephone"><i class="fa-solid fa-phone"></i> 69 60 80 00</li>
+                    <li title="Our contact email-address" itemprop="email"><i class="fa-solid fa-envelope"></i> <a href="mailto:postmottak@hiof.no">postmottak@hiof.no</a></li> <!--mailto element hentet fra W3 Schools (Kilde 2 - se eksamensdokument) -->
                 </ul>
             </article>
         </section>
     </main>
-    <footer>
+    <footer itemscope itemtype="https://schema.org/WPFooter">
         <section id="footer3">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8188.819074708739!2d11.3610488!3d59.1289743!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2s%C3%98stfold%20University%20College!5e0!3m2!1sen!2sno!4v1700846297805!5m2!1sen!2sno" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>               
-        <section id="footer2">
+        <section id="footer2" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="url" content="https://itstud.hiof.no/~idakto/">
             <figure>
-                <a href="index.html"><img src="img/main-logo.png" alt="The circle logo"></a>
+                <a href="index.html" title="Go to home page" role="button" aria-current="page"><img src="img/main-logo.png" alt="The circle logo" itemprop="logo"></a> <!--Bilde er informativt og burde inneholde et beskrivende alt atribut -->
             </figure>
-            <h3 id="copyrigths">Company copyright 2023</h3>
-            <ul id="icons-footer">
+            <h3 id="copyrigths" itemprop="copyrightHolder">Company copyright 2023</h3>
+            <ul id="icons-footer" itemscope itemtype="https://schema.org/SocialMediaPosting">
                 <li>
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.facebook.com/" title="Go to our facebook page" aria-label="Visit our Facebook page" itemprop="url"><i class="fa-brands fa-square-facebook"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/" title="Go to our instagram page" aria-label="Visit our Instagram page" itemprop="url"><i class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com" title="Go to our linkedin page" aria-label="Visit our Linkedin page" itemprop="url"><i class="fa-brands fa-linkedin"></i></a>
                 </li>
             </ul>
         </section>
     </footer>
-    <!--Start, krevet av chat gpt(kilde 1)-->
+    <!--Start, srevet av chat gpt(kilde 1)-->
     <script> 
         function scrollToTop() {
           window.scrollTo({

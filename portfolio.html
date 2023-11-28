@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ida Tollaksen">
+    <meta name="description" content="The circle company - Our portfolio">
     
     <!--kobling til Css dokument og legger til iconer fra font awsome-->
     <link href="css/style.css" rel="stylesheet">
@@ -10,121 +12,154 @@
     <link href="css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
     <link href="css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
     <link href="css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+
+    <!--Legger til fav icon-->
+    <link rel="icon" type="image/x-icon" href="img/main-logo.png">
+
+    <!--facbook meta data-->
+    <meta property="og:title" content="The circle company">
+    <meta property="og:url" content="https://schema.org/AggregateRating">
+    <meta property="og:description" content="The circle company - Our portfolio">
+    <meta property="og:image" content="https://pixabay.com/photos/forest-trees-fog-conifers-pine-3622519/"> 
     
+    <!--Instagram meta data-->
+    <meta property="og:title" content="The circle company">
+    <meta property="og:description" content="The circle company - Our portfolio">
+    <meta property="og:image" content="https://pixabay.com/photos/forest-trees-fog-conifers-pine-3622519/">
+    <meta property="og:image:alt" content="The circle company Instagram Image">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itstud.hiof.no/~idakto/portfolio.html">
+
     <title>Portfolio</title>
 </head>
 <body>
-    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top" aria-label="Scroll to Top"><i class="fa-solid fa-arrow-up"></i></button>
     <header>
-        <nav id="nav-bar-top">
-            <a href="index.html"><img src="img/main-logo.png" alt="The circle logo"></a>
+        <nav id="nav-bar-top" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="index.html"><img src="img/main-logo.png" alt="The circle logo" title="Go to home page"></a> <!--Bilde er informativt og burde inneholde et beskrivende alt atribut -->
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html" class="yellow-underline" title="Go to home page" itemprop="url">
+                        <span itemprop="name">Home</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="portfolio.html">Portfolio</a>
+                    <a href="portfolio.html" class="yellow-underline" title="Go to portfolio page" aria-current="page" itemprop="url">
+                        <span itemprop="name">Portfolio</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="about.html" class="yellow-underline" title="Go to about us page" itemprop="url">
+                        <span itemprop="name">About</span>
+                    </a>
                 </li>
                 <li class="yellow-btn">
-                    <a href="about.html#contact-us">Contact</a>
+                    <a class="yellow-btn-a" href="about.html#contact-form" title="Go to contact us form" itemprop="url">
+                        <span itemprop="name">Contact</span>
+                    </a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="portfolio-section">
+        <section id="portfolio-section" itemscope itemtype="https://schema.org/ContactPage">
             <figure>
-                <img src="img/forest-backround.jpg" alt="Misty forest in autumn">
+                <img src="img/forest-backround.jpg" alt="Misty forest in autumn" itemprop="thumbnail"> <!--Bilde er til pynt-->
                 <figcaption>
-                    <h1>Portfolio</h1>
+                    <h1 itemprop="headline">Portfolio</h1>
                 </figcaption>
             </figure>
         </section>        
-        <section id="previous-jobs">
-            <h2>Explore previous jobs</h2>
-            <article>
-                <ul>
-                    <li>
-                        <a href="#branding">Branding</a>
-                    </li>
-                    <li>
-                        <a href="#design">Design</a>
-                    </li>
-                    <li>
-                        <a href="#development">Development</a>
-                    </li>
-                </ul>
-            </article>
+        <section id="previous-jobs" itemscope itemtype="https://schema.org/ItemList">
+            <h2 itemprop="name">Explore previous jobs</h2>
+            <ul>
+                <li>
+                    <a href="#branding" title="Go to branding section" role="button" itemprop="url">
+                        <span itemprop="itemListElement">Branding</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li>
+                    <a href="#design" title="Go to Design section" role="button" itemprop="url">
+                        <span itemprop="itemListElement">Design</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li>
+                    <a href="#development" title="Go to development section" role="button" itemprop="url">
+                        <span itemprop="itemListElement">Development</span>
+                    </a>
+                    <meta itemprop="position" content="3" />
+                </li>
+            </ul>
         </section>
-        <section id="branding" class="bilde-flex">
-            <h2>Branding</h2>
+        <section id="branding" class="bilde-flex" itemtype="http://schema.org/WebPageElement">
+            <h2 itemprop="name">Branding</h2>
             <figure>
-                <img src="img/400x400.png" alt="placeholder image 400x400 px">
-                <figcaption>Nunc lobortis mattis</figcaption>
+                <img src="img/400x400.png" alt="placeholder image 400x400 px" itemprop="image"> <!--Bilde er informativt og burde inneholde et beskrivende alt atribut, dette gjelder for alle bildene under - Bilde 1 (se eksamensdokument for kilde)-->
+                <figcaption itemprop="description">Nunc lobortis mattis</figcaption>
             </figure>
             <figure>
-                <img src="img/400x400.png" alt="placeholder image 400x400 px">
-                <figcaption>Nunc lobortis mattis</figcaption>
+                <img src="img/400x400.png" alt="placeholder image 400x400 px" itemprop="image">
+                <figcaption itemprop="description">Nunc lobortis mattis</figcaption>
             </figure>
             <figure>
-                <img src="img/400x400.png" alt="placeholder image 400x400 px">
-                <figcaption>Nunc lobortis mattis</figcaption>
+                <img src="img/400x400.png" alt="placeholder image 400x400 px" itemprop="image">
+                <figcaption itemprop="description">Nunc lobortis mattis</figcaption>
             </figure>
             <figure>
-                <img src="img/400x400.png" alt="placeholder image 400x400 px">
-                <figcaption>Nunc lobortis mattis</figcaption>
-            </figure>
-        </section>
-        <section id="design" class="bilde-flex">
-            <h2>Design</h2>
-            <figure>
-                <img src="img/400x400.png" alt="placeholder image 400x400 px">
-                <figcaption>Nunc lobortis mattis</figcaption>
-            </figure>
-            <figure>
-                <img src="img/400x400.png" alt="placeholder image 400x400 px">
-                <figcaption>Nunc lobortis mattis</figcaption>
-            </figure>
-            <figure>
-                <img src="img/400x400.png" alt="placeholder image 400x400 px">
-                <figcaption>Nunc lobortis mattis</figcaption>
+                <img src="img/400x400.png" alt="placeholder image 400x400 px" itemprop="image">
+                <figcaption itemprop="description">Nunc lobortis mattis</figcaption>
             </figure>
         </section>
-        <section id="development" class="bilde-flex">
-            <h2>Development</h2>
+        <section id="design" class="bilde-flex" itemtype="http://schema.org/WebPageElement">
+            <h2 itemprop="name">Design</h2>
             <figure>
-                <img src="img/400x400.png" alt="placeholder image 400x400 px">
-                <figcaption>Nunc lobortis mattis</figcaption>
+                <img src="img/400x400.png" alt="placeholder image 400x400 px" itemprop="image">
+                <figcaption itemprop="description">Nunc lobortis mattis</figcaption>
             </figure>
             <figure>
-                <img src="img/400x400.png" alt="placeholder image 400x400 px">
-                <figcaption>Nunc lobortis mattis</figcaption>
+                <img src="img/400x400.png" alt="placeholder image 400x400 px" itemprop="image">
+                <figcaption itemprop="description">Nunc lobortis mattis</figcaption>
+            </figure>
+            <figure>
+                <img src="img/400x400.png" alt="placeholder image 400x400 px" itemprop="image">
+                <figcaption itemprop="description">Nunc lobortis mattis</figcaption>
+            </figure>
+        </section>
+        <section id="development" class="bilde-flex" itemtype="http://schema.org/WebPageElement">
+            <h2 itemprop="name">Development</h2>
+            <figure>
+                <img src="img/400x400.png" alt="placeholder image 400x400 px" itemprop="image">
+                <figcaption itemprop="description">Nunc lobortis mattis</figcaption>
+            </figure>
+            <figure>
+                <img src="img/400x400.png" alt="placeholder image 400x400 px" itemprop="image">
+                <figcaption itemprop="description">Nunc lobortis mattis</figcaption>
             </figure>
         </section>
     </main>
-    <footer>
-        <section id="footer2">
+    <footer itemscope itemtype="https://schema.org/WPFooter">
+        <section id="footer2" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="url" content="https://itstud.hiof.no/~idakto/">
             <figure>
-                <a href="index.html"><img src="img/main-logo.png" alt="The circle logo"></a>
+                <a href="index.html" title="Go to home page" role="button" aria-current="page"><img src="img/main-logo.png" alt="The circle logo" itemprop="logo"></a> <!--Bilde er informativt og burde inneholde et beskrivende alt atribut -->
             </figure>
-            <h3 id="copyrigths">Company copyright 2023</h3>
-            <ul id="icons-footer">
+            <h3 id="copyrigths" itemprop="copyrightHolder">Company copyright 2023</h3>
+            <ul id="icons-footer" itemscope itemtype="https://schema.org/SocialMediaPosting">
                 <li>
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.facebook.com/" title="Go to our facebook page" aria-label="Visit our Facebook page" itemprop="url"><i class="fa-brands fa-square-facebook"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/" title="Go to our instagram page" aria-label="Visit our Instagram page" itemprop="url"><i class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com" title="Go to our linkedin page" aria-label="Visit our Linkedin page" itemprop="url"><i class="fa-brands fa-linkedin"></i></a>
                 </li>
             </ul>
         </section>
     </footer>
-    <!--Start, krevet av chat gpt(kilde 1)-->
+    <!--Start, srevet av chat gpt(kilde 1)-->
     <script> 
         function scrollToTop() {
           window.scrollTo({

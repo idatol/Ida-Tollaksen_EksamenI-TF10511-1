@@ -8,6 +8,7 @@ font-family: 'Victor Mono', monospace;
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    max-width: 1600px; /* Legger til max bredde på 1600px*/
   }  
 
 #nav-bar-top{
@@ -46,8 +47,12 @@ body{
 .yellow-btn{
     background-color: #e6bd43;
     border: 1px solid #000000;
-    color: #000;
     text-decoration: none;
+}
+
+.yellow-btn:hover{
+    background-color: #fff;
+    color: #e6bd43 !important; /* Får ikke endret skriftfarge (Se eksamensdokument)*/
 }
 
 .yellow-underline {
@@ -63,11 +68,12 @@ body{
     bottom: -2px;
     left: 0;
     background-color: #e6bd43;
-    transition: 0.3s ease;
     transform: scaleX(0);
   }
   
-  .yellow-underline:hover::after {
+ 
+  
+  .yellow-underline[aria-current="page"]::after { /* kilde 1 (Se eksamensdokument) */
     transform: scaleX(1);
   }
   
@@ -107,7 +113,7 @@ css for forside start
     font-size: 2.5vw;
 }
 
-#compelling-headline-section figcaption a {
+#read-more-services{
     text-decoration: none;
     font-size: 2.5vw;
     font-weight: 800;
@@ -116,7 +122,6 @@ css for forside start
     color: #000;
     background-color: #e6bd43;
 }
-
 
 #sub-heading{
     display: flex;
@@ -159,6 +164,13 @@ p{
     border: 1px solid #000;
     padding: 1.5vw;
     color: #000;
+}
+
+#read-more:hover, #sign-me-up:hover, 
+#read-more-services:hover, #contact-us:hover,
+#knapp-send:hover{
+    background-color: #000;
+    color: #e6bd43;
 }
 
 #our-services{
@@ -323,7 +335,14 @@ h3{
 .bilde-flex figure img{
     max-width: 350px;
     min-width: 200px;
+    transition: transform 0.3s ease;
+    margin: 15px 0;
 }
+
+.bilde-flex figure img:hover {
+    transform: scale(1.1); 
+}
+
 
 #aoc figure{
     position: relative;
@@ -340,13 +359,13 @@ h3{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Generert av chat gpt */
+    transform: translate(-50%, -50%); /* Generert av chat gpt (Kilde 1) */
     text-align: left;
     color: #000;
     width: 80%;
     background-color: #fff;
     opacity: 0.75;
-    padding: 2rem;
+    padding: 1rem 0.5rem;
 }
 
 #aoc figcaption h1{
@@ -438,6 +457,7 @@ h3{
 
 #knapp-send{
     width: 8rem;
+    background-color: #e6bd43;
 }
 
 #info-form{
@@ -490,9 +510,14 @@ css for desktop
         font-size: 2vw;
     }
     
+    #aoc figcaption{
+        width: 50%;
+        left: 70%;
+        padding: 2rem;
+    } 
     
     #aoc figcaption p{
-        margin-bottom: 2.5rem;
+        margin-bottom: 1rem;
     }
 
     #about-our-comp-forside{

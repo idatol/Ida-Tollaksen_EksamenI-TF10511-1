@@ -476,11 +476,10 @@ h3{
     margin: 1rem 0;
 }
 
-#scrollBtn {
+#scrollbtn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 99;
     font-size: 1.5rem;
     border: 0.5px solid #000;
     background-color: #e6bd43;
@@ -488,6 +487,12 @@ h3{
     padding: 10px;
     border-radius: 5px;
   }
+
+#compelling-headline-section video{
+    width: 100%;
+    margin: 2rem 0;
+    opacity: 0.5; /*50% synlighet*/
+}
 
 
 /*  

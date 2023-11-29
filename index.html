@@ -33,7 +33,7 @@
     <title>Forside</title>
 </head>
 <body>
-    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top" aria-label="Scroll to Top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button onclick="scrollToTop()" id="scrollbtn" title="Go to top" aria-label="Scroll to Top"><i class="fa-solid fa-arrow-up"></i></button>
     <header>
         <nav id="nav-bar-top" itemscope itemtype="https://schema.org/SiteNavigationElement">
             <a href="index.html"><img src="img/main-logo.png" alt="The circle logo" title="Go to home page"></a> <!--Bilde er informativt og burde inneholde et beskrivende alt atribut - Bilde 1 (se eksamensdokument) -->
@@ -63,8 +63,11 @@
     </header>
     <main>
         <section id="compelling-headline-section" itemscope itemtype="https://schema.org/ContactPage">
-            <figure>
-                <img src="img/forest-backround.jpg" alt="Misty forest in autumn" itemprop="thumbnail"> <!--Bilde er til pynt-->
+            <figure itemprop="associatedMedia" itemscope itemtype="https://schema.org/VideoObject">
+                <video src="img/forest-video.mp4" autoplay muted loop itemprop="contentUrl"></video> <!--Video kilde 5, teori fra W3 Scholls kilde 2 (Se eksamensdokument for begge)-->
+                <meta itemprop="uploadDate" content="2019-05-17">
+                <meta itemprop="name" content="Kelly">
+                <meta itemprop="thumbnailUrl" content="https://www.pexels.com/video/a-shallow-river-streaming-through-a-bed-of-rocks-2330708/">
                 <figcaption>
                     <h1 itemprop="headline">Compelling headline</h1>
                     <p itemprop="description">
